@@ -1,0 +1,74 @@
+.bar:nth-child(1).active {
+    position: absolute;
+    transform: rotate(-45deg);
+
+
+}
+
+.bar {
+    transition: all .2s;
+}
+
+.bar:nth-child(2).active {
+    position: absolute;
+    width: 0;
+}
+
+.bar:nth-child(3).active {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger {
+    z-index: 1;
+}
+
+.hamburger::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+
+.hamburger:hover .bar:nth-child(2) {
+    width: 100%;
+}
+
+.hamburger:hover .bar:nth-child(2).active {
+    width: 00%;
+}
+
+.mobile-nav.active {
+    transform: translateX(0%);
+}
+
+.mobile-links.active {
+    background: linear-gradient(-75deg, #15FF8A20 300px, transparent 50px);
+}
+
+.mobile-nav {
+    transition: all .2s;
+}
+
+.mobile-links {
+    background: linear-gradient(-75deg, #15FF8A20 300px, transparent 50px);
+    background-size: 100% 100%;
+    background-position: 310px;
+    background-repeat: no-repeat;
+    transition: all .5s;
+    border-radius: 10px;
+}
+
+.mobile-links:hover {
+    background-position: -100px 0%;
+    backdrop-filter: blur(5px);
+}

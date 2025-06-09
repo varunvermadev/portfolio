@@ -1,9 +1,8 @@
-import Navbar from "../features/Navbar/Navbar"
 
 const Homepage = () => {
     return (
         <>
-            <Navbar />
+            <h1 className="text-white text-2xl">home</h1>
         </>
     )
 }
